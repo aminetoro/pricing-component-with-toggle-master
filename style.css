@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+:root {
+  --LinearGradient: linear-gradient(
+    120deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--DarkGrayishBlue);
+}
+.container {
+  background: url('images/bg-bottom.svg') no-repeat bottom left/300px,
+    url('images/bg-top.svg') no-repeat top right/300px;
+  background-color: var(--VeryLightGrayishBlue);
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+}
+.container .titleprice {
+  font-size: 1.8em;
+  margin-top: 25px;
+  text-align: center;
+}
+.buttontogglecontainer {
+  line-height: 30px;
+  margin: 14px auto;
+  display: flex;
+  justify-content: center;
+}
+.buttontogglecontainer .annually,
+.buttontogglecontainer .monthly {
+  color: var(--LightGrayishBlue);
+}
+.btntoggle {
+  position: relative;
+  background-image: none;
+  background-color: var(--LightGrayishBlue);
+  width: 55px;
+  height: 30px;
+  margin: 0px 15px 0 15px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+}
+.btntoggle:hover {
+  background-image: var(--LinearGradient);
+}
+
+.btntoggle .circle {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 44%;
+  height: 80%;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.btntoggle.annually .circle {
+  left: 8%;
+}
+.btntoggle.monthly .circle {
+  right: 8%;
+}
+.priceblocks {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.priceblocks section {
+  width: 33.33%;
+  padding: 2% 1.5%;
+  background-color: white;
+  box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.3);
+}
+.priceblocks section:nth-child(1) {
+  border-radius: 15px 0 0 15px;
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  -o-border-radius: 15px 0 0 15px;
+}
+.priceblocks section:nth-child(2) {
+  padding: 4.5% 1.5%;
+
+  background-image: var(--LinearGradient);
+  border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -ms-border-radius: 15px 15px 15px 15px;
+  -o-border-radius: 15px 15px 15px 15px;
+}
+.priceblocks section:nth-child(3) {
+  border-radius: 0 15px 15px 0;
+  -webkit-border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 15px 15px 0;
+  -ms-border-radius: 0 15px 15px 0;
+  -o-border-radius: 0 15px 15px 0;
+}
+.priceblocks section h3 {
+  font-size: 1em;
+  text-align: center;
+  color: var(--LightGrayishBlue);
+}
+.priceblocks section.pro h3 {
+  color: white;
+}
+.priceblocks section h1 {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.priceblocks section h1 .dollarsign {
+  font-size: 2.4em;
+  padding-right: 1.4%;
+}
+.priceblocks section h1 .dollarvalue {
+  font-size: 3.8em;
+}
+
+.priceblocks section.pro h1 span {
+  color: white;
+}
+.Features {
+  margin-top: 20px;
+}
+.Features p {
+  border-top: 1px solid var(--LightGrayishBlue);
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+.priceblocks section.pro p {
+  color: white;
+}
+.Features p:last-child {
+  border-bottom: 1px solid var(--LightGrayishBlue);
+}
+.btnlearnmore {
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: white;
+  background-image: var(--LinearGradient);
+  font-family: inherit;
+  display: block;
+  margin: 80px auto;
+  margin-bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.btnlearnmore:hover {
+  background: transparent;
+  border: 1px solid var(--GrayishBlue);
+  color: var(--GrayishBlue);
+}
+.priceblocks section.pro .btnlearnmore:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.btnlearnmore:focus {
+  outline: 0;
+}
+.priceblocks section.pro .btnlearnmore {
+  background-image: none;
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 12px;
+  }
+  .priceblocks {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 10px;
+  }
+  .priceblocks {
+    width: 90vw;
+  }
+  .btnlearnmore {
+    font-size: inherit;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 394px) {
+  .container {
+    background: url('images/bg-bottom.svg') no-repeat bottom left/200px,
+      url('images/bg-top.svg') no-repeat top right/200px;
+    background-color: var(--VeryLightGrayishBlue);
+  }
+  body {
+    font-size: 12px;
+  }
+  .priceblocks {
+    flex-direction: column;
+  }
+  .btnlearnmore {
+    font-size: inherit;
+  }
+  .priceblocks section {
+    margin-top: 20px;
+    width: 90%;
+    border-radius: 10px 10px 10px 10px !important;
+    -webkit-border-radius: 10px 10px 10px 10px !important;
+    -moz-border-radius: 10px 10px 10px 10px !important;
+    -ms-border-radius: 10px 10px 10px 10px !important;
+    -o-border-radius: 10px 10px 10px 10px !important;
+  }
+  .priceblocks section .btnlearnmore {
+    width: 90%;
+  }
+}
